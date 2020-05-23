@@ -40,7 +40,8 @@ def echo(update, context):
 
 def echo(update, context):
     """Echo the user message."""
-    respuesta = translate(update)
+    respuesta = str(translate(update.message.text))
+
     update.message.reply_text(respuesta)
 
 
